@@ -1,0 +1,393 @@
+[2173056, 3046579]
+{
+  "took": 0,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 2,
+      "relation": "eq"
+    },
+    "max_score": 0.0,
+    "hits": [
+      {
+        "_index": "bbuy_products",
+        "_type": "_doc",
+        "_id": "2173056",
+        "_score": 0.0,
+        "_source": {
+          "productId": [
+            "1218312456491"
+          ],
+          "sku": [
+            "2173056"
+          ],
+          "name": [
+            "Batman: Arkham City - PlayStation 3"
+          ],
+          "type": [
+            "Game"
+          ],
+          "startDate": [
+            "2011-03-02"
+          ],
+          "active": [
+            "true"
+          ],
+          "regularPrice": [
+            "39.99"
+          ],
+          "salePrice": [
+            "39.99"
+          ],
+          "artistName": [],
+          "onSale": [
+            "false"
+          ],
+          "digital": [
+            "false"
+          ],
+          "frequentlyPurchasedWith": [
+            "3650106",
+            "3725119",
+            "9954685",
+            "2613621",
+            "2670855",
+            "3802117",
+            "2674157",
+            "3294743",
+            "3558367",
+            "9659134"
+          ],
+          "accessories": [],
+          "relatedProducts": [],
+          "crossSell": [],
+          "salesRankShortTerm": [
+            "4696"
+          ],
+          "salesRankMediumTerm": [
+            "2946"
+          ],
+          "salesRankLongTerm": [
+            "3248"
+          ],
+          "bestSellingRank": [
+            "4709"
+          ],
+          "url": [
+            "http://www.bestbuy.com/site/Batman%3A+Arkham+City+-+PlayStation+3/2173056.p?id=1218312456491&skuId=2173056&cmp=RMX"
+          ],
+          "categoryPath": [
+            "Best Buy",
+            "Video Games",
+            "PlayStation 3",
+            "PS3 Games"
+          ],
+          "categoryPathIds": [
+            "cat00000",
+            "abcat0700000",
+            "abcat0703000",
+            "abcat0703002"
+          ],
+          "categoryLeaf": [
+            "abcat0703002"
+          ],
+          "categoryPathCount": 4.0,
+          "customerReviewCount": [
+            "91"
+          ],
+          "customerReviewAverage": [
+            "4.8"
+          ],
+          "inStoreAvailability": [
+            "false"
+          ],
+          "onlineAvailability": [
+            "true"
+          ],
+          "releaseDate": [
+            "2011-10-18"
+          ],
+          "shippingCost": [
+            "0.00"
+          ],
+          "shortDescription": [
+            "The Dark Knight returns in this epic follow-up"
+          ],
+          "shortDescriptionHtml": [
+            "The Dark Knight returns in this epic follow-up"
+          ],
+          "class": [
+            "VIDEO GAME SOFTWARE"
+          ],
+          "classId": [
+            "92"
+          ],
+          "subclass": [
+            "PLAYSTATION 3 SFTWRE"
+          ],
+          "subclassId": [
+            "922"
+          ],
+          "department": [
+            "INTERACTIVE SOFTWARE"
+          ],
+          "departmentId": [
+            "9"
+          ],
+          "bestBuyItemId": [
+            "1565790"
+          ],
+          "description": [],
+          "manufacturer": [
+            "WB Games"
+          ],
+          "modelNumber": [
+            "1000172510"
+          ],
+          "image": [
+            "http://images.bestbuy.com/BestBuy_US/images/products/2173/2173056.jpg"
+          ],
+          "condition": [],
+          "inStorePickup": [
+            "true"
+          ],
+          "homeDelivery": [
+            "false"
+          ],
+          "quantityLimit": [
+            "1"
+          ],
+          "color": [],
+          "depth": [],
+          "height": [],
+          "weight": [],
+          "shippingWeight": [
+            "0.3"
+          ],
+          "width": [],
+          "longDescription": [
+            "SynopsisWhen night falls on Gotham and the seedy undergrowth of the city emerges, Batman is there waiting. Ever vigilant, the Dark Knight monitors the city he protects from high above the gritty streets. No one knows his deepest secret \u0097 except Dr. Hugo Strange. With Gotham's criminally insane, vile villains and insidious characters confined within the walls of Arkham City, Batman must fight to ensure his true identity remains hidden from the citizens he vows to protect.  The Dark Knight returns to Gotham in the follow-up to the popular Arkham Asylum in Batman: Arkham City. Soar inside the heavily fortified walls of Gotham's new maximum security home to explore this all-new world that is five times larger than the Asylum. Glide, soar and grapple through the City as you engage in hand-to-hand combat against enemies or take advantage of Batman's trademark stealth maneuvers. Experience the intense, gritty atmosphere with a brand-new storyline that brings together a new all-star cast of classic characters and menacing murderers from the Batman universe. Utilize an array of new and enhanced gameplay features that put you behind the mask of the Dark Knight like never before."
+          ],
+          "longDescriptionHtml": [
+            "<script LANGUAGE=\"JavaScript\"> var ESRB = \"t\"; var ESRBText =\"TEEN\"; var ESRBAtr = \"Alcohol Reference, Blood, Mild Language, Suggestive Themes, Use of Tobacco, Violence\"; </script> <link href=\"http://images.bestbuy.com/BestBuy_US/en_US/images/musicmoviegame/videogames/promos/games.css\" rel=\"stylesheet\" type=\"text/css\"><!-- Content for ISPU here --> <div class=\"header\">Synopsis</div>When night falls on Gotham and the seedy undergrowth of the city emerges, Batman is there waiting. Ever vigilant, the Dark Knight monitors the city he protects from high above the gritty streets. No one knows his deepest secret \u0097 except Dr. Hugo Strange. With Gotham's criminally insane, vile villains and insidious characters confined within the walls of Arkham City, Batman must fight to ensure his true identity remains hidden from the citizens he vows to protect.<br><br>The Dark Knight returns to Gotham in the follow-up to the popular <b>Arkham Asylum</b> in <b>Batman: Arkham City</b>. Soar inside the heavily fortified walls of Gotham's new maximum security home to explore this all-new world that is five times larger than the <b>Asylum</b>. Glide, soar and grapple through the <b>City</b> as you engage in hand-to-hand combat against enemies or take advantage of Batman's trademark stealth maneuvers. Experience the intense, gritty atmosphere with a brand-new storyline that brings together a new all-star cast of classic characters and menacing murderers from the Batman universe. Utilize an array of new and enhanced gameplay features that put you behind the mask of the Dark Knight like never before."
+          ],
+          "features": [
+            "Follow-up to the popular hit Batman: Arkham Asylum",
+            "Explore the sprawling new super-prison of Arkham City, which is five times larger than Arkham Island and features a wide variety of industrial districts, iconic locations and Gotham landmarks",
+            "Features an all-new storyline that takes you inside the wretched heart of Gotham, crafted by five-time Emmy Award-winner Paul Dini",
+            "Become The Dark Knight through an authentic Batman experience that features advanced, compelling gameplay, high-impact street brawls, adrenaline-pumping stealth, dangerous supervillain encounters, glimpses into Batman's tortured psychology and more",
+            "Battle fearsome foes who bring highly coordinated, simultaneous attacks from every direction with twice as many attacks, counters, takedowns and combat animations",
+            "Use Batman's arsenal of gadgets, including new ones such as the Cryptographic Sequencer V2 and Smoke Pellets, to expand your range of abilities without weighing you down",
+            "Encounter a legendary cast of characters from the Batman universe, including Catwoman, Two-Face, Harley Quinn, Hugo Strange, Victor Zsasz, Calendar Man, The Joker, The Riddler and more",
+            "Enjoy the voiceover talents of Mark Hamill and Kevin Conroy, who reprise their roles as The Joker and Batman"
+          ]
+        },
+        "fields": {
+          "_ltrlog": [
+            {
+              "log_entry": [
+                {
+                  "name": "name_match",
+                  "value": 16.922375
+                }
+              ]
+            }
+          ]
+        },
+        "matched_queries": [
+          "logged_featureset"
+        ]
+      },
+      {
+        "_index": "bbuy_products",
+        "_type": "_doc",
+        "_id": "3046579",
+        "_score": 0.0,
+        "_source": {
+          "productId": [
+            "1218374325485"
+          ],
+          "sku": [
+            "3046579"
+          ],
+          "name": [
+            "Batman: Arkham City Collector's Edition - PlayStation 3"
+          ],
+          "type": [
+            "Game"
+          ],
+          "startDate": [
+            "2011-07-06"
+          ],
+          "active": [
+            "true"
+          ],
+          "regularPrice": [
+            "49.99"
+          ],
+          "salePrice": [
+            "49.99"
+          ],
+          "artistName": [],
+          "onSale": [
+            "false"
+          ],
+          "digital": [
+            "false"
+          ],
+          "frequentlyPurchasedWith": [
+            "4120055",
+            "4037693",
+            "3622726"
+          ],
+          "accessories": [],
+          "relatedProducts": [],
+          "crossSell": [],
+          "salesRankShortTerm": [
+            "86816"
+          ],
+          "salesRankMediumTerm": [
+            "15024"
+          ],
+          "salesRankLongTerm": [
+            "7317"
+          ],
+          "bestSellingRank": [
+            "86846"
+          ],
+          "url": [
+            "http://www.bestbuy.com/site/Batman%3A+Arkham+City+Collector's+Edition+-+PlayStation+3/3046579.p?id=1218374325485&skuId=3046579&cmp=RMX"
+          ],
+          "categoryPath": [
+            "Best Buy",
+            "Video Games",
+            "PlayStation 3",
+            "PS3 Games"
+          ],
+          "categoryPathIds": [
+            "cat00000",
+            "abcat0700000",
+            "abcat0703000",
+            "abcat0703002"
+          ],
+          "categoryLeaf": [
+            "abcat0703002"
+          ],
+          "categoryPathCount": 4.0,
+          "customerReviewCount": [
+            "15"
+          ],
+          "customerReviewAverage": [
+            "5.0"
+          ],
+          "inStoreAvailability": [
+            "true"
+          ],
+          "onlineAvailability": [
+            "false"
+          ],
+          "releaseDate": [
+            "2011-10-18"
+          ],
+          "shippingCost": [
+            "0.00"
+          ],
+          "shortDescription": [
+            "The Dark Knight returns in this epic follow-up with exclusive extras"
+          ],
+          "shortDescriptionHtml": [
+            "The Dark Knight returns in this epic follow-up with exclusive extras"
+          ],
+          "class": [
+            "VIDEO GAME SOFTWARE"
+          ],
+          "classId": [
+            "92"
+          ],
+          "subclass": [
+            "PLAYSTATION 3 SFTWRE"
+          ],
+          "subclassId": [
+            "922"
+          ],
+          "department": [
+            "INTERACTIVE SOFTWARE"
+          ],
+          "departmentId": [
+            "9"
+          ],
+          "bestBuyItemId": [
+            "1615437"
+          ],
+          "description": [],
+          "manufacturer": [
+            "WB Games"
+          ],
+          "modelNumber": [
+            "1000235551"
+          ],
+          "image": [
+            "http://images.bestbuy.com/BestBuy_US/images/products/3046/3046579.jpg"
+          ],
+          "condition": [],
+          "inStorePickup": [
+            "true"
+          ],
+          "homeDelivery": [
+            "false"
+          ],
+          "quantityLimit": [
+            "1"
+          ],
+          "color": [],
+          "depth": [],
+          "height": [],
+          "weight": [],
+          "shippingWeight": [
+            "1.0"
+          ],
+          "width": [],
+          "longDescription": [
+            "SynopsisWhen night falls on Gotham and the seedy undergrowth of the city emerges, Batman is there waiting. Ever vigilant, the Dark Knight monitors the city he protects from high above the gritty streets. No one knows his deepest secret \u0097 except Dr. Hugo Strange. With Gotham's criminally insane, vile villains and insidious characters confined within the walls of Arkham City, Batman must fight to ensure his true identity remains hidden from the citizens he vows to protect.  The Dark Knight returns to Gotham in the follow-up to the popular Arkham Asylum in Batman: Arkham City. This exclusive Collector's Edition brings the Caped Crusader to life in a whole new way with a custom Batman statue designed by Kotobukiya, a collectible art book, early access to the Iceberg Lounge challenge map and Batman: The Dark Knight Returns skin, Batman: Arkham City album and more. Soar inside the heavily fortified walls of Gotham's new maximum security home to explore this all-new world that is five times larger than the Asylum. Glide, soar and grapple through the City as you engage in hand-to-hand combat against enemies or take advantage of Batman's trademark stealth maneuvers. Experience the intense, gritty atmosphere with a brand-new storyline that brings together a new all-star cast of classic characters and menacing murderers from the Batman universe. Utilize an array of new and enhanced gameplay features that put you behind the mask of the Dark Knight like never before."
+          ],
+          "longDescriptionHtml": [
+            "<script LANGUAGE=\"JavaScript\"> var ESRB = \"t\"; var ESRBText =\"TEEN\"; var ESRBAtr = \"Alcohol Reference, Blood, Mild Language, Suggestive Themes, Use of Tobacco, Violence\"; </script> <link href=\"http://images.bestbuy.com/BestBuy_US/en_US/images/musicmoviegame/videogames/promos/games.css\" rel=\"stylesheet\" type=\"text/css\"><!-- Content for ISPU here --> <div class=\"header\">Synopsis</div>When night falls on Gotham and the seedy undergrowth of the city emerges, Batman is there waiting. Ever vigilant, the Dark Knight monitors the city he protects from high above the gritty streets. No one knows his deepest secret \u0097 except Dr. Hugo Strange. With Gotham's criminally insane, vile villains and insidious characters confined within the walls of Arkham City, Batman must fight to ensure his true identity remains hidden from the citizens he vows to protect.<br><br>The Dark Knight returns to Gotham in the follow-up to the popular <b>Arkham Asylum</b> in <b>Batman: Arkham City</b>. This exclusive <b>Collector's Edition</b> brings the Caped Crusader to life in a whole new way with a custom Batman statue designed by Kotobukiya, a collectible art book, early access to the Iceberg Lounge challenge map and Batman: The Dark Knight Returns skin, <b>Batman: Arkham City</b> album and more. Soar inside the heavily fortified walls of Gotham's new maximum security home to explore this all-new world that is five times larger than the <b>Asylum</b>. Glide, soar and grapple through the <b>City</b> as you engage in hand-to-hand combat against enemies or take advantage of Batman's trademark stealth maneuvers. Experience the intense, gritty atmosphere with a brand-new storyline that brings together a new all-star cast of classic characters and menacing murderers from the Batman universe. Utilize an array of new and enhanced gameplay features that put you behind the mask of the Dark Knight like never before."
+          ],
+          "features": [
+            "Collector's Edition includes a custom Batman statue, a collectible art book, early access to add-on content, Batman: Arkham City album, Batman: Gotham Knight animated original movie and four collectible cards",
+            "Custom Batman statue is produced by Kotobukiya to bring the Dark Knight into your home",
+            "Gain early access to the Iceberg Lounge challenge map and Batman: The Dark Knight Returns skin",
+            "Flip through the pages of a brilliantly illustrated art book to soak up all the Arkham City content available",
+            "Sit back and relax with the bonus DC Universe animated original movie, Batman: Gotham Knight",
+            "Immerse yourself into the excitement of Gotham's seedy underside with the Batman: Arkham City album from WaterTower Music which includes original songs by hit artists",
+            "Soar into the maximum security \"home\" for Gotham City's terrible thieves, thugs, gangsters and criminal masterminds",
+            "Explore the expansive Arkham City which is five times larger than 2009's Batman: Arkham Asylum",
+            "Uncover the brand-new story that combines an all-star cast of classic characters and vile villains from the Batman universe",
+            "Battle fierce foes, explore the sprawling district and solve challenging puzzles with an array of new and enhanced gameplay features that put your crime-fighting skills to the test as the Dark Knight"
+          ]
+        },
+        "fields": {
+          "_ltrlog": [
+            {
+              "log_entry": [
+                {
+                  "name": "name_match",
+                  "value": 14.574888
+                }
+              ]
+            }
+          ]
+        },
+        "matched_queries": [
+          "logged_featureset"
+        ]
+      }
+    ]
+  }
+}
