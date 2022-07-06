@@ -11,6 +11,7 @@ from urllib.parse import urljoin
 import pandas as pd
 import fileinput
 import logging
+import fasttext
 
 
 logger = logging.getLogger(__name__)
@@ -61,7 +62,6 @@ def create_query(user_query, click_prior_query, filters, sort="_score", sortDir=
                 "query": {
                     "bool": {
                         "must": [
-
                         ],
                         "should": [  #
                             {
@@ -187,11 +187,31 @@ def create_query(user_query, click_prior_query, filters, sort="_score", sortDir=
     return query_obj
 
 
-def search(client, user_query, index="bbuy_products", sort="_score", sortDir="desc"):
+def search(client, user_query, index="bbuy_products", sort="_score", sortDir="desc", query_model=None):
     #### W3: classify the query
     #### W3: create filters and boosts
+    categories = []
+    if query_model:
+        prob = 0.0
+        labels, preds = query_model.predict(user_query, k=5)
+        for label, pred in zip(list(labels), preds):
+            if prob < 0.5:
+                categories.append(label.replace('__label__', ''))
+                prob += pred
+            else:
+                break
+
     # Note: you may also want to modify the `create_query` method above
-    query_obj = create_query(user_query, click_prior_query=None, filters=None, sort=sort, sortDir=sortDir, source=["name", "shortDescription"])
+    filters = None
+    if len(categories) > 0:
+        filters = {
+            "terms": {
+                "categoryPathIds": categories
+            }
+        }
+    sort = "salePrice"
+    query_obj = create_query(user_query, click_prior_query=None, filters=filters, sort=sort, sortDir=sortDir, source=["name", "shortDescription", "categoryPathIds", "salePrice", "categoryPath"])
+
     logging.info(query_obj)
     response = client.search(query_obj, index=index)
     if response and response['hits']['hits'] and len(response['hits']['hits']) > 0:
@@ -214,6 +234,7 @@ if __name__ == "__main__":
     general.add_argument('--user',
                          help='The OpenSearch admin.  If this is set, the program will prompt for password too. If not set, use default of admin/admin')
     general.add_argument('--synonyms', help="use synonyms", default=False)
+    general.add_argument('--model', help="query model", default=None)
     
 
     args = parser.parse_args()
@@ -241,6 +262,7 @@ if __name__ == "__main__":
         ssl_show_warn=False,
 
     )
+    query_model = fasttext.load_model(args.model)
     index_name = args.index
     query_prompt = "\nEnter your query (type 'Exit' to exit or hit ctrl-c):"
     print(query_prompt)
@@ -249,7 +271,7 @@ if __name__ == "__main__":
         query = line.rstrip()
         if query == "Exit":
             break
-        search(client=opensearch, user_query=query, index=index_name)
+        search(client=opensearch, user_query=query, index=index_name, query_model=query_model)
 
         print(query_prompt)
 

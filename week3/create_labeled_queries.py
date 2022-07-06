@@ -49,9 +49,17 @@ df = pd.read_csv(queries_file_name)[['category', 'query']]
 df = df[df['category'].isin(categories)]
 
 # IMPLEMENT ME: Convert queries to lowercase, and optionally implement other normalization, like stemming.
+# remove ", ', extra spaces and lowercase
+df['query'] = df['query'].apply(lambda x : " ".join(x.replace('"', '').replace("'", "").replace('_', ' ').lower().split()))
 
 # IMPLEMENT ME: Roll up categories to ancestors to satisfy the minimum number of queries per category.
+counts = df['category'].value_counts()
+while counts.min() < int(args.min_queries) and counts.min() != counts.max():
+    rollups = {x:parents_df.loc[parents_df.category == x].parent.item() for x, cnt in counts.iteritems() if x != root_category_id and cnt < int(args.min_queries)}
+    df['category'] = df['category'].map(rollups).fillna(df['category'])
+    counts = df['category'].value_counts()
 
+print(df)
 # Create labels in fastText format.
 df['label'] = '__label__' + df['category']
 
