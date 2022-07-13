@@ -12,11 +12,33 @@ import pandas as pd
 import fileinput
 import logging
 import fasttext
-
+from sentence_transformers import SentenceTransformer
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 logging.basicConfig(format='%(levelname)s:%(message)s')
+
+logger.info("Creating Model")
+# IMPLEMENT ME: instantiate the sentence transformer model!
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+logger.info("{}".format(model))
+
+def create_vector_query(query_string, num_results, source=None):
+    embedding = model.encode([query_string])[0]
+    query_obj = {
+        "size": num_results,
+        "query": {
+            "knn": {
+                "name_embedding": {
+                    "vector": list(embedding),
+                    "k": num_results
+                }
+            }
+        }
+    }
+    if source is not None:  # otherwise use the default and retrieve all source
+        query_obj["_source"] = source
+    return query_obj
 
 # expects clicks and impressions to be in the row
 def create_prior_queries_from_group(
@@ -187,7 +209,7 @@ def create_query(user_query, click_prior_query, filters, sort="_score", sortDir=
     return query_obj
 
 
-def search(client, user_query, index="bbuy_products", sort="_score", sortDir="desc", query_model=None):
+def search(client, user_query, index="bbuy_products", sort="_score", sortDir="desc", query_model=None, vector_search=False):
     #### W3: classify the query
     #### W3: create filters and boosts
     categories = []
@@ -210,7 +232,10 @@ def search(client, user_query, index="bbuy_products", sort="_score", sortDir="de
             }
         }
     sort = "salePrice"
-    query_obj = create_query(user_query, click_prior_query=None, filters=filters, sort=sort, sortDir=sortDir, source=["name", "shortDescription", "categoryPathIds", "salePrice", "categoryPath"])
+    if vector_search:
+        query_obj = create_vector_query(user_query, 10, source=["name", "shortDescription", "categoryPathIds", "salePrice", "categoryPath"])
+    else:
+        query_obj = create_query(user_query, click_prior_query=None, filters=filters, sort=sort, sortDir=sortDir, source=["name", "shortDescription", "categoryPathIds", "salePrice", "categoryPath"])
 
     logging.info(query_obj)
     response = client.search(query_obj, index=index)
@@ -235,6 +260,7 @@ if __name__ == "__main__":
                          help='The OpenSearch admin.  If this is set, the program will prompt for password too. If not set, use default of admin/admin')
     general.add_argument('--synonyms', help="use synonyms", default=False)
     general.add_argument('--model', help="query model", default=None)
+    general.add_argument('--vector', help="use vector search", default=False)
     
 
     args = parser.parse_args()
@@ -262,7 +288,8 @@ if __name__ == "__main__":
         ssl_show_warn=False,
 
     )
-    query_model = fasttext.load_model(args.model)
+    query_model = None
+    # query_model = fasttext.load_model(args.model)
     index_name = args.index
     query_prompt = "\nEnter your query (type 'Exit' to exit or hit ctrl-c):"
     print(query_prompt)
@@ -271,7 +298,7 @@ if __name__ == "__main__":
         query = line.rstrip()
         if query == "Exit":
             break
-        search(client=opensearch, user_query=query, index=index_name, query_model=query_model)
+        search(client=opensearch, user_query=query, index=index_name, query_model=query_model, vector_search=args.vector)
 
         print(query_prompt)
 
